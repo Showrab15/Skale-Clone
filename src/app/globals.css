@@ -45,3 +45,17 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.animate-scroll-infinite {
+  animation: scroll-infinite 45s linear infinite;
+  display: flex;
+  will-change: transform;
+}
+
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
