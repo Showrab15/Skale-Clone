@@ -180,6 +180,198 @@
 //   );
 // }
 
+// "use client";
+
+// import { motion } from "framer-motion";
+// import { useEffect, useRef, useState } from "react";
+
+// // Define type for Step
+// interface Step {
+//   id: string;
+//   title: string;
+//   desc: string;
+//   color: string;
+//   pin: string;
+//   innerColor: string;
+// }
+
+// // A unique list of steps with new colors and titles
+// const steps: Step[] = [
+//   {
+//     id: "01",
+//     title: "Discovery",
+//     desc: "A detailed outline of our service tailored for your needs.",
+//     color: "bg-gradient-to-br from-orange-50 to-orange-100",
+//     pin: "bg-orange-500 shadow-orange-500/50",
+//     innerColor: "bg-white",
+//   },
+//   {
+//     id: "02",
+//     title: "Wireframe",
+//     desc: "Ideation and wireframing to ensure the UX flow is perfect.",
+//     color: "bg-gradient-to-br from-blue-50 to-blue-100",
+//     pin: "bg-blue-500 shadow-blue-500/50",
+//     innerColor: "bg-white",
+//   },
+//   {
+//     id: "03",
+//     title: "Design",
+//     desc: "Polished UI design with usability and aesthetics in mind.",
+//     color: "bg-gradient-to-br from-purple-50 to-purple-100",
+//     pin: "bg-purple-500 shadow-purple-500/50",
+//     innerColor: "bg-white",
+//   },
+//   {
+//     id: "04",
+//     title: "Development",
+//     desc: "Bringing your design to life with clean, scalable code.",
+//     color: "bg-gradient-to-br from-green-50 to-green-100",
+//     pin: "bg-green-500 shadow-green-500/50",
+//     innerColor: "bg-white",
+//   },
+//   {
+//     id: "05",
+//     title: "Deployment",
+//     desc: "Launching your product and making it available to the world.",
+//     color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
+//     pin: "bg-yellow-500 shadow-yellow-500/50",
+//     innerColor: "bg-white",
+//   },
+// ];
+
+// export default function HowItWorks(): JSX.Element {
+//   return (
+//     <div className="bg-gray-100 font-sans antialiased text-gray-800">
+//       <section className="relative py-24 overflow-hidden bg-[url('/bg-line.avif')] bg-cover bg-center bg-no-repeat">
+//         {/* Add an overlay for readability (optional) */}
+//         <div className="absolute inset-0 bg-white/70"></div>
+//         <div className="relative max-w-xl md:max-w-2xl mx-auto px-6">
+//           {/* Cards */}
+//           <div className="relative">
+//             {steps.map((step, i) => (
+//               <div key={step.id} className="flex flex-col items-center">
+//                 <StepCard step={step} index={i} />
+
+//                 {/* Curved Dotted Connector SVG between cards */}
+//                 {/* Curved Dotted Connector SVG between cards */}
+//                 {i < steps.length - 1 && (
+//                   <div
+//                     className={`flex-shrink-0 mt-14 ${
+//                       i % 2 === 0
+//                         ? "rotate-45 relative left-10"
+//                         : "-rotate-45 -left-10 relative"
+//                     }`} // alternate curve direction
+//                     aria-hidden="true"
+//                   >
+//                     <CurvedDottedConnector index={i} />
+//                   </div>
+//                 )}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+// /* Curved Dotted Connector Component */
+// /* Curved Dotted Connector Component */
+// function CurvedDottedConnector({ index }: { index: number }): JSX.Element {
+//   // Alternate direction: right ↔ left
+//   const curves = [
+//     "M0,0 C200,200 400,200 600,400", // curve right
+//     "M600,0 C400,200 200,200 0,400", // curve left
+//   ];
+
+//   const pathData = curves[index % 2]; // alternate every step
+
+//   return (
+//     <svg
+//       viewBox="0 0 612 421"
+//       preserveAspectRatio="none"
+//       className="w-full h-[160px]" // control connector height
+//     >
+//       <path
+//         d={pathData}
+//         fill="none"
+//         stroke="#D1D5DB"
+//         strokeWidth="2"
+//         strokeDasharray="6 4"
+//         strokeLinecap="round"
+//         opacity="0.6"
+//       />
+//     </svg>
+//   );
+// }
+
+// /* Custom intersection observer hook */
+// function useIntersection() {
+//   const [isVisible, setIsVisible] = useState(false);
+//   const ref = useRef<HTMLDivElement>(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setIsVisible(true);
+//         }
+//       },
+//       { threshold: 0.2 }
+//     );
+
+//     const currentRef = ref.current;
+//     if (currentRef) {
+//       observer.observe(currentRef);
+//     }
+
+//     return () => {
+//       if (currentRef) {
+//         observer.unobserve(currentRef);
+//       }
+//     };
+//   }, []);
+
+//   return { ref, isVisible };
+// }
+
+// /* Card pop-in with pushpin style */
+// /* Card pop-in with pushpin image */
+// function StepCard({ step, index }: { step: Step; index: number }): JSX.Element {
+//   const { ref, isVisible } = useIntersection();
+//   const isRight = index % 2 === 0;
+
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ opacity: 0, scale: 0.5 }}
+//       animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+//       transition={{ duration: 0.5, delay: index * 0.05 }}
+//       className={`relative - flex w-full ${
+//         isRight
+//           ? "justify-end -rotate-[11deg]  md:-left-15 left-8 "
+//           : "md:justify-start  justify-end rotate-[11deg] md:left-15 left-8"
+//       }`}
+//     >
+//       {/* Card Image */}
+//       <div className="relative w-80">
+//         <img
+//           src="/howit1.avif" // <-- replace with actual path
+//           alt={step.title}
+//           className="w-[250px] md:w-full h-auto rounded-2xl shadow-xl"
+//         />
+
+//         {/* Pushpin Image */}
+//         <img
+//           src="/3dpush.avif" // <-- replace with actual path of 3D pushpin image
+//           alt="pushpin"
+//           className="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[168px] h-[217px]"
+//         />
+//       </div>
+//     </motion.div>
+//   );
+// }
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -239,28 +431,23 @@ const steps: Step[] = [
   },
 ];
 
-export default function HowItWorks(): JSX.Element {
+const HowItWorks: React.FC = () => {
   return (
     <div className="bg-gray-100 font-sans antialiased text-gray-800">
       <section className="relative py-24 overflow-hidden bg-[url('/bg-line.avif')] bg-cover bg-center bg-no-repeat">
-        {/* Add an overlay for readability (optional) */}
         <div className="absolute inset-0 bg-white/70"></div>
         <div className="relative max-w-xl md:max-w-2xl mx-auto px-6">
-          {/* Cards */}
           <div className="relative">
             {steps.map((step, i) => (
               <div key={step.id} className="flex flex-col items-center">
                 <StepCard step={step} index={i} />
-
-                {/* Curved Dotted Connector SVG between cards */}
-                {/* Curved Dotted Connector SVG between cards */}
                 {i < steps.length - 1 && (
                   <div
                     className={`flex-shrink-0 mt-14 ${
                       i % 2 === 0
                         ? "rotate-45 relative left-10"
                         : "-rotate-45 -left-10 relative"
-                    }`} // alternate curve direction
+                    }`}
                     aria-hidden="true"
                   >
                     <CurvedDottedConnector index={i} />
@@ -273,24 +460,22 @@ export default function HowItWorks(): JSX.Element {
       </section>
     </div>
   );
-}
+};
 
 /* Curved Dotted Connector Component */
-/* Curved Dotted Connector Component */
-function CurvedDottedConnector({ index }: { index: number }): JSX.Element {
-  // Alternate direction: right ↔ left
+const CurvedDottedConnector: React.FC<{ index: number }> = ({ index }) => {
   const curves = [
     "M0,0 C200,200 400,200 600,400", // curve right
     "M600,0 C400,200 200,200 0,400", // curve left
   ];
 
-  const pathData = curves[index % 2]; // alternate every step
+  const pathData = curves[index % 2];
 
   return (
     <svg
       viewBox="0 0 612 421"
       preserveAspectRatio="none"
-      className="w-full h-[160px]" // control connector height
+      className="w-full h-[160px]"
     >
       <path
         d={pathData}
@@ -303,7 +488,7 @@ function CurvedDottedConnector({ index }: { index: number }): JSX.Element {
       />
     </svg>
   );
-}
+};
 
 /* Custom intersection observer hook */
 function useIntersection() {
@@ -321,14 +506,10 @@ function useIntersection() {
     );
 
     const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
@@ -336,8 +517,7 @@ function useIntersection() {
 }
 
 /* Card pop-in with pushpin style */
-/* Card pop-in with pushpin image */
-function StepCard({ step, index }: { step: Step; index: number }): JSX.Element {
+const StepCard: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
   const { ref, isVisible } = useIntersection();
   const isRight = index % 2 === 0;
 
@@ -347,27 +527,26 @@ function StepCard({ step, index }: { step: Step; index: number }): JSX.Element {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={isVisible ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className={`relative - flex w-full ${
+      className={`relative flex w-full ${
         isRight
-          ? "justify-end -rotate-[11deg]  md:-left-15 left-8 "
-          : "md:justify-start  justify-end rotate-[11deg] md:left-15 left-8"
+          ? "justify-end -rotate-[11deg] md:-left-15 left-8"
+          : "md:justify-start justify-end rotate-[11deg] md:left-15 left-8"
       }`}
     >
-      {/* Card Image */}
       <div className="relative w-80">
         <img
-          src="/howit1.avif" // <-- replace with actual path
+          src="/howit1.avif"
           alt={step.title}
           className="w-[250px] md:w-full h-auto rounded-2xl shadow-xl"
         />
-
-        {/* Pushpin Image */}
         <img
-          src="/3dpush.avif" // <-- replace with actual path of 3D pushpin image
+          src="/3dpush.avif"
           alt="pushpin"
           className="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[168px] h-[217px]"
         />
       </div>
     </motion.div>
   );
-}
+};
+
+export default HowItWorks;
