@@ -375,6 +375,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // Define type for Step
@@ -396,6 +397,7 @@ const steps: Step[] = [
     color: "bg-gradient-to-br from-orange-50 to-orange-100",
     pin: "bg-orange-500 shadow-orange-500/50",
     innerColor: "bg-white",
+    img: "/howit1.avif",
   },
   {
     id: "02",
@@ -404,6 +406,7 @@ const steps: Step[] = [
     color: "bg-gradient-to-br from-blue-50 to-blue-100",
     pin: "bg-blue-500 shadow-blue-500/50",
     innerColor: "bg-white",
+    img: "/howit2.avif",
   },
   {
     id: "03",
@@ -412,6 +415,7 @@ const steps: Step[] = [
     color: "bg-gradient-to-br from-purple-50 to-purple-100",
     pin: "bg-purple-500 shadow-purple-500/50",
     innerColor: "bg-white",
+    img: "/howit3.avif",
   },
   {
     id: "04",
@@ -420,6 +424,7 @@ const steps: Step[] = [
     color: "bg-gradient-to-br from-green-50 to-green-100",
     pin: "bg-green-500 shadow-green-500/50",
     innerColor: "bg-white",
+    img: "/howit4.avif",
   },
   {
     id: "05",
@@ -428,6 +433,7 @@ const steps: Step[] = [
     color: "bg-gradient-to-br from-yellow-50 to-yellow-100",
     pin: "bg-yellow-500 shadow-yellow-500/50",
     innerColor: "bg-white",
+    img: "/howit5.avif",
   },
 ];
 
@@ -534,16 +540,21 @@ const StepCard: React.FC<{ step: Step; index: number }> = ({ step, index }) => {
       }`}
     >
       <div className="relative w-80">
-        <img
-          src="/howit1.avif"
+        <Image
+          src={step.img} // same as your previous src
           alt={step.title}
+          width={250} // match w-[250px] (required for next/image)
+          height={250} // approximate height; can adjust or use layout="responsive"
           className="w-[250px] md:w-full h-auto rounded-2xl shadow-xl"
         />
-        <img
-          src="/3dpush.avif"
-          alt="pushpin"
-          className="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[168px] h-[217px]"
-        />
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[168px] h-[217px]">
+          <Image
+            src="/3dpush.avif"
+            alt="pushpin"
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
     </motion.div>
   );
