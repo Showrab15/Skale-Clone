@@ -9,10 +9,12 @@ import Testimonial from "@/components/Testimonial/Testimonial";
 export default function Home() {
   return (
     <>
-      <HowItWorks />
-      <Projects />
       <Sponsors />
+      <Projects />
       <Services />
+
+      <HowItWorks />
+
       <PricingSection />
       <Testimonial />
       <FAQSection />
