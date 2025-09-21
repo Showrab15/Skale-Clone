@@ -48,7 +48,11 @@ body {
   display: flex;
   will-change: transform;
 }
-
+.animate-scroll-infinite-sponsors {
+  animation: scroll-infinite 25s linear infinite;
+  display: flex;
+  will-change: transform;
+}
 @keyframes scroll-infinite {
   0% {
     transform: translateX(0);

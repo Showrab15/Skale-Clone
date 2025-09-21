@@ -8,34 +8,42 @@ interface ImageData {
 
 const Sponsors: React.FC = () => {
   const images: ImageData[] = [
-    { id: 1, src: "/slider1.png", alt: "Mountain landscape" },
-    { id: 2, src: "/slider2.png", alt: "Ocean sunset" },
-    { id: 3, src: "/slider3.png", alt: "Forest path" },
-    { id: 4, src: "/slider4.png", alt: "Desert dunes" },
-    { id: 5, src: "/slider5.png", alt: "Canyon view" },
+    { id: 1, src: "/context.avif", alt: "Mountain landscape" },
+    { id: 2, src: "/ajax.avif", alt: "Ocean sunset" },
+    { id: 3, src: "/stemwave.avif", alt: "Forest path" },
+    { id: 4, src: "/rolai.avif", alt: "Desert dunes" },
+    { id: 5, src: "/clickup.avif", alt: "Canyon view" },
+    { id: 6, src: "/boltnew.avif", alt: "Canyon view" },
+    { id: 7, src: "/whop.avif", alt: "Canyon view" },
+    { id: 8, src: "/framer.avif", alt: "Canyon view" },
   ];
 
   return (
-    <div className="w-full overflow-hidden lg:mt-[80px] mt-[40px] ">
-      <div className="relative">
-        <div className="flex animate-scroll-infinite gap-4 min-w-max">
-          {[...images, ...images].map((image: ImageData, index: number) => (
-            <div
-              key={index}
-              className="relative flex-shrink-0 md:w-[800px] md:h-[500px] w-[430px] h-[340px] overflow-hidden rounded-xl"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill // ✅ forces full container coverage
-                className="object-cover"
-                priority={false}
-              />
-            </div>
-          ))}
-        </div>
+    <section
+      className=" mx-auto mt-20 max-w-[1440px] flex justify-center items-center overflow-hidden "
+      style={{
+        padding: 0,
+        listStyleType: "none",
+        opacity: 1,
+        maskImage:
+          "linear-gradient(to right, rgba(0,0,0,0) 0%, rgb(0,0,0) 10%, rgb(0,0,0) 90%, rgba(0,0,0,0) 100%)",
+      }}
+    >
+      <div className=" text-red-500 flex animate-scroll-infinite-sponsors gap-[64px] md:gap-[85px] items-center">
+        {[...images, ...images].map((image) => (
+          <div key={image.id + Math.random()} className="flex-shrink-0">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={140} // replace with your actual image width
+              height={100} // replace with your actual image height
+              className="object-contain"
+              priority={false}
+            />
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
