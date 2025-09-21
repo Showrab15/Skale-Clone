@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -11,7 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[#f9f9f9]">{children}</body>
+      <body className="bg-[#f9f9f9]">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
