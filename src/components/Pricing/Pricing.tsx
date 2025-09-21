@@ -7,7 +7,7 @@ import PricingCard from "./PricingCard"; // Adjust the import path as needed
 const PricingSection: React.FC = () => {
   return (
     <section
-      className="font-inter w-full pt-[72px] px-[64px] pb-[100px]  min-h-screen rounded-[100px]"
+      className="font-inter w-full md:pt-[72px] md:px-[64px] px-[20px] md:pb-[100px] py-[48px] md:py-0  min-h-screen rounded-[36px] md:rounded-[100px]"
       style={{
         background:
           "radial-gradient(62.4157% 80.1102% at 52.5481% 31.5073%, #ff9255 5.54%, #ff7537 48.2%, #ff5c00 78.5%)",

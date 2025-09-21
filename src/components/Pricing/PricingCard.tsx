@@ -27,7 +27,7 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({ spotsCount }) => {
   const opacity = count === 3 ? 1 : count === 2 ? 0.7 : 0.4;
 
   return (
-    <div className="ml-2 flex items-center gap-4 font-inter">
+    <div className="mx-auto md:mx-0 md:ml-2 flex items-center gap-4 font-inter">
       <div className="relative w-3 h-3">
         {/* Outer rings */}
         <div
@@ -48,7 +48,9 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = ({ spotsCount }) => {
           style={{ opacity }}
         />
       </div>
-      <span className="text-[16px] text-black/50">{spotsCount}</span>
+      <span className="text-[16px] md:text-[20px] leading-[30px] text-[#00000080]">
+        {spotsCount}
+      </span>
     </div>
   );
 };
@@ -62,7 +64,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, index }) => {
       transition={{ delay: index * 0.2, duration: 0.6 }}
     >
       <div
-        className={`relative rounded-[50px] py-[48px] pl-[48px] max-w-[830px] mx-auto gap-[52px] flex border border-white 
+        className={`relative rounded-[50px]  border border-white  md:max-w-[830px] mx-auto
           ${plan.isHighlighted ? "bg-white" : "bg-[#e7e8ea]"} 
           backdrop-blur-lg`}
         style={{
@@ -76,46 +78,53 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, index }) => {
           `,
         }}
       >
-        {/* Background Preview */}
+        <div
+          className="mx-auto flex flex-col pt-[72px] pb-[48px] mt-pt-0
+           md:py-[48px] md:pl-[48px] pl-[20px]   
+            md:flex-row "
+        >
+          {/* Background Preview */}
 
-        {/* Title + Price + Description */}
-        <div className="w-1/2 flex-col flex gap-[20px]">
-          <h3 className="text-3xl font-semibold text-black">{plan.title}</h3>
-          <div className="text-6xl font-bold text-black">
-            {plan.price}
-            <span className="text-gray-500">+</span>
-          </div>
-          <div className="flex flex-col gap-[32px]">
-            <p className="text-lg text-black/50  leading-snug w-8/12">
-              {plan.description}
-            </p>
-            {/* CTA */}
-            <div
-              className=" w-[243px]"
-              style={{ transform: "none", transformOrigin: "50% 50% 0px" }}
-            >
-              <motion.a
-                target="_blank"
-                className="block w-full"
-                style={{
-                  background:
-                    "linear-gradient(rgb(255, 116, 12) 0%, rgb(255, 75, 0) 100%)",
-                  borderRadius: "18px",
-                  boxShadow:
-                    "rgba(244, 77, 4, 0.16) 0px 35px 53px 0px, rgba(244, 77, 4, 0.32) 0px 7px 21px 0px, rgb(191, 54, 0) 0px 2px 0px 0px",
-                  willChange: "auto",
-                  transform: "none",
-                  transformOrigin: "50% 50% 0px",
-                  opacity: 1,
-                }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+          {/* Title + Price + Description */}
+          <div className="md:w-1/2 flex-col justify-center flex gap-[20px]">
+            <h3 className="text-[28px] leading-[34px] font-normal text-black">
+              {plan.title}
+            </h3>
+            <div className="text-[56px] md:text-[64px] leading-[76px] font-normal text-black">
+              {plan.price}
+              <span className="text-gray-500">+</span>
+            </div>
+            <div className="flex flex-col gap-[32px]">
+              <p className="text-[16px] md:text-[20px] leading-[24px] text-black/50  w-8/12">
+                {plan.description}
+              </p>
+              {/* CTA */}
+              <div
+                className="mx-auto md:mx-0 w-[243px]"
+                style={{ transform: "none", transformOrigin: "50% 50% 0px" }}
               >
-                <div
+                <motion.a
+                  target="_blank"
+                  className="block w-full"
                   style={{
-                    backgroundColor: "rgb(255, 92, 0)",
-                    borderRadius: "15px",
-                    boxShadow: `
+                    background:
+                      "linear-gradient(rgb(255, 116, 12) 0%, rgb(255, 75, 0) 100%)",
+                    borderRadius: "18px",
+                    boxShadow:
+                      "rgba(244, 77, 4, 0.16) 0px 35px 53px 0px, rgba(244, 77, 4, 0.32) 0px 7px 21px 0px, rgb(191, 54, 0) 0px 2px 0px 0px",
+                    willChange: "auto",
+                    transform: "none",
+                    transformOrigin: "50% 50% 0px",
+                    opacity: 1,
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: "rgb(255, 92, 0)",
+                      borderRadius: "15px",
+                      boxShadow: `
                     rgba(255, 255, 255, 0.16) 0px 0.602187px 0.602187px -1.25px inset,
                     rgba(255, 255, 255, 0.14) 0px 2.28853px 2.28853px -2.5px inset,
                     rgba(255, 255, 255, 0.06) 0px 10px 10px -3.75px inset,
@@ -131,67 +140,71 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, index }) => {
                     rgba(0, 0, 0, 0.03) 0px -5.74439px 28.7219px -3.75px inset,
                     rgba(0, 0, 0, 0) 0px -18px 90px -5px inset
                   `,
-                    willChange: "auto",
-                    transform: "none",
-                    transformOrigin: "50% 50% 0px",
-                    opacity: 1,
-                  }}
-                >
-                  <div
-                    style={{
-                      outline: "none",
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "flex-start",
-                      flexShrink: 0,
-                      color: "rgb(255, 255, 255)",
+                      willChange: "auto",
                       transform: "none",
                       transformOrigin: "50% 50% 0px",
-                      padding: "12px 4px",
+                      opacity: 1,
                     }}
                   >
-                    <p
+                    <div
                       style={{
-                        fontSize: "24px",
-                        lineHeight: "145%",
+                        outline: "none",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "flex-start",
+                        flexShrink: 0,
                         color: "rgb(255, 255, 255)",
-                        margin: 0,
-                        textAlign: "center",
+                        transform: "none",
+                        transformOrigin: "50% 50% 0px",
+                        padding: "12px 4px",
                       }}
                     >
-                      Book a 15-min call
-                    </p>
+                      <p
+                        style={{
+                          fontSize: "24px",
+                          lineHeight: "145%",
+                          color: "rgb(255, 255, 255)",
+                          margin: 0,
+                          textAlign: "center",
+                        }}
+                      >
+                        Book a 15-min call
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.a>
-            </div>
+                </motion.a>
+              </div>
 
-            {/* Availability */}
-            <div className="flex justify-start">
-              <StatusIndicator spotsCount={plan.spotsAvailable} />
+              {/* Availability */}
+              <div className="flex justify-start">
+                <StatusIndicator spotsCount={plan.spotsAvailable} />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Divider */}
-        {/* <div className="h-[10px] bg-gray-300/60 my-6" /> */}
+          <div className="flex md:flex-row flex-col gap-[52px]">
+            {/* Divider */}
+            <div className="hidden  md:block w-[2px] h-[374px] rounded-full bg-[#dadada]" />
+            <div className="mt-10 md:hidden block h-[2px] w-[274px] rounded-full bg-[#dadada]" />
 
-        {/* Features */}
-        <div className="w space-y-6">
-          {plan.features.map((feature, i) => (
-            <div key={i} className="flex items-center gap-[11px]">
-              <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
-                <img
-                  src="/correcticon.webp"
-                  alt="Feature"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className=" font-inter text-[20px] text-black/60">
-                {feature}
-              </span>
+            {/* Features */}
+            <div className="my-auto space-y-6">
+              {plan.features.map((feature, i) => (
+                <div key={i} className="flex items-center gap-[11px]">
+                  <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0">
+                    <img
+                      src="/correcticon.webp"
+                      alt="Feature"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className=" font-inter text-[20px] text-black/60">
+                    {feature}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </motion.div>
