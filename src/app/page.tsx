@@ -1,3 +1,4 @@
+import Banner from "@/components/Bsnner/Banner";
 import FAQSection from "@/components/FAQ/FAQ";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import PricingSection from "@/components/Pricing/Pricing";
@@ -9,6 +10,7 @@ import Testimonial from "@/components/Testimonial/Testimonial";
 export default function Home() {
   return (
     <>
+      <Banner />
       <Sponsors />
       <Projects />
       <Services />
