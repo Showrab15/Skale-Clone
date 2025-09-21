@@ -4,8 +4,7 @@ export interface PricingData {
   price: string;
   description: string;
   spotsAvailable: string;
-  backgroundImage: string;
-  features: string;
+  features: string[];
   isHighlighted: boolean;
 }
 export const pricingData: PricingData[] = [
@@ -16,7 +15,6 @@ export const pricingData: PricingData[] = [
     description:
       "Every business needs a landing, and it's never been easier to get one...",
     spotsAvailable: "2 spots available",
-    backgroundImage: "/correcticon.webp",
     features: [
       "2 design concepts",
       "Full copywriting",

@@ -8,7 +8,6 @@ interface PricingData {
   price: string;
   description: string;
   spotsAvailable: string;
-  backgroundImage?: string;
   features: string[];
   isHighlighted: boolean;
 }
@@ -65,7 +64,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan, index }) => {
     >
       <div
         className={`relative rounded-[50px]  border border-white  md:max-w-[830px] mx-auto
-          ${plan.isHighlighted ? "bg-white" : "bg-[#e7e8ea]"} 
+          ${plan.isHighlighted ? "bg-white" : "bg-[#ffebe2]"} 
           backdrop-blur-lg`}
         style={{
           boxShadow: `
