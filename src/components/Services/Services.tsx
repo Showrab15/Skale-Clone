@@ -24,8 +24,9 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="font-inter w-full px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px] mx-auto max-w-[1200px]">
+    <section className="font-inter w-full  mx-auto max-w-[ 1200px]">
       <motion.div
+        className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -50,7 +51,10 @@ const Services: React.FC = () => {
               Drive Results
             </h1>
 
-            <p className="font-medium lg:text-[28px] lg:leading-[40px] text-[20px] leading-[28px] text-[#00000080]">
+            <p
+              className="font-medium lg:text-[28px] lg:leading-[40px]
+             text-[20px] leading-[28px] text-[#00000080]"
+            >
               What we can help you to achieve?
             </p>
           </div>
@@ -59,7 +63,7 @@ const Services: React.FC = () => {
 
       {/* Services Grid */}
       <motion.div
-        className="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-16"
+        className="px-4 grid grid-cols-1 xl:grid-cols-3 gap-4  sm:px-[48px] pb-20 lg:px-[64px]"
         variants={containerVariants}
       >
         {servicesData.map((service, index) => (
