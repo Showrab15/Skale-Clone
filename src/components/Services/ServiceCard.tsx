@@ -1,10 +1,9 @@
 "use client";
+import type { ServicesData } from "@/utils/servicesData";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { ServiceCardData } from "../utils/servicesData";
-
 interface ServiceCardProps {
-  service: ServiceCardData;
+  service: ServicesData;
   index: number;
 }
 

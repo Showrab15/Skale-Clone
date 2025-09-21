@@ -1,9 +1,8 @@
-export interface ServiceCardData {
+export interface ServicesData {
   id: number;
   title: string;
   description: string;
   backgroundImage: string;
-  contentImage: string;
   switcherData?: {
     label: string;
     value: string;
@@ -22,7 +21,7 @@ export interface ServiceCardData {
   };
 }
 
-export const servicesData: ServiceCardData[] = [
+export const servicesData: ServicesData[] = [
   {
     id: 1,
     title: "Get a Huge Funding",
