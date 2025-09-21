@@ -372,7 +372,7 @@ const FAQSection: React.FC = () => {
                       variants={contentVariants}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 sm:px-8 pb-6 sm:pb-8">
+                      <div className="px-6 sm:px-8 py-2">
                         <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                           {item.answer}
                         </p>

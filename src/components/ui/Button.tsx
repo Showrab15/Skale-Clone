@@ -1,19 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import React from "react";
 
 interface ButtonProps {
-  href?: string;
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  href = "/30-min",
-  className = "",
-}) => {
+const Button: React.FC<ButtonProps> = ({ className = "" }) => {
   return (
-    <Link href={href} target="_blank" className={className}>
+    <div className={className}>
       <motion.div
         className="relative flex items-center gap-3 px-[20px] py-3 bg-gradient-to-b from-[#f9f9f9] to-[#e6e6e6] rounded-2xl cursor-pointer overflow-hidden"
         style={{
@@ -99,7 +94,7 @@ const Button: React.FC<ButtonProps> = ({
           </p>
         </motion.div>
       </motion.div>
-    </Link>
+    </div>
   );
 };
 

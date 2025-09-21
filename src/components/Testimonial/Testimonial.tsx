@@ -12,7 +12,6 @@ interface ReviewData {
   description: string;
   icon: string;
   name: string;
-  role: string;
   impression: string;
 }
 
@@ -55,7 +54,7 @@ const Testimonial: React.FC = () => {
               results.
             </p>
             <div className="flex justify-center items-center ">
-              <Button href="/30-min" className="max-w-fit" />
+              <Button className="max-w-fit" />
             </div>
           </div>
         </motion.div>
