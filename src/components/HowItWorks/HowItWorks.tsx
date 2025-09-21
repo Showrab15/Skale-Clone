@@ -458,7 +458,7 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#f0f0f0] font-inter antialiased text-gray-800">
+    <div className="bg-[#f0f0f0] rounded-t-[36px] xl:rounded-t-[100px] font-inter antialiased text-gray-800">
       <motion.div
         className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
         initial="hidden"
@@ -495,7 +495,7 @@ const HowItWorks: React.FC = () => {
       </motion.div>
 
       <section
-        className="relative py-24 overflow-hidden bg-[url('/bg-line.avif')]
+        className=" relative py-24 overflow-hidden bg-[url('/bg-line.avif')]
        bg-cover bg-center bg-no-repeat"
       >
         <div className="relative max-w-xl md:max-w-2xl mx-auto px-6">
