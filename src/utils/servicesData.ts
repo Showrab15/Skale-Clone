@@ -27,7 +27,7 @@ export const servicesData: ServicesData[] = [
     title: "Get a Huge Funding",
     description:
       "We have helped tens of startups all over the world to get $70m+ in funding in total. We make websites that impress users",
-    backgroundImage: "/services2.avif",
+    backgroundImage: "/services1.avif",
     switcherData: {
       label: "Turn on",
       value: "Growth",
@@ -50,7 +50,7 @@ export const servicesData: ServicesData[] = [
     title: "Stay Ahead of the Market",
     description:
       "Every page on the web is 1:1 similar to each other. But it's your chance to get something more unique and unusual",
-    backgroundImage: "/services2.avif",
+    backgroundImage: "/services1.avif",
     statsData: {
       title: "Stats will speak for itself",
       items: [
