@@ -41,26 +41,39 @@ const Banner: React.FC = () => {
           <div className="space-y-8 text-center">
             <div className="inline-flex mb-8">
               <div
-                className=" cursor-pointer group group-hover:px-6 flex gap-2 items-center bg-white rounded-full px-5 py-3 shadow-lg"
+                className=" cursor-pointer group group-hover:px-6 flex gap-4 lg:gap-0 items-center bg-white rounded-full px-5 py-3 shadow-lg"
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.07) 0px 5.37707px 9.14102px 0px",
                 }}
               >
                 <div className="flex group-hover:gap-1">
-                  <img className="w-11 h-11 " src="/person1.avif" alt="" />
                   <img
-                    className="w-11 h-11 -left-2 relative bg-[#cddfff] rounded-full"
+                    className="lg:w-11 lg:h-11 h-7 w-7 "
+                    src="/person1.avif"
+                    alt=""
+                  />
+                  <img
+                    className="lg:w-11 lg:h-11 h-7 w-7 -left-2 relative bg-[#cddfff] rounded-full"
                     src="/person2.avif"
                     alt=""
                   />
                   <img
-                    className="bg-[#d7d7d9] rounded-full w-11 h-11 -left-4  relative"
+                    className="bg-[#d7d7d9] rounded-full lg:w-11 lg:h-11 h-7 w-7 -left-4  relative"
                     src="/person3.avif"
                     alt=""
                   />
                 </div>
-                <p className="text-xl leading-28px]  font-normal text-[#00000080] text-center">
+                <p
+                  className="lg:block hidden text-[13px] lg:text-xl lg:leading-[28px]  font-normal text-[#00000080]
+                text-nowrap text-center"
+                >
                   60+ startups & founders chose skale.solutions
+                </p>
+                <p
+                  className="lg:hidden block text-[13px] lg:text-xl lg:leading-[28px]  font-normal text-[#00000080]
+                text-nowrap text-center"
+                >
+                  48+ startups & founders chose us
                 </p>
               </div>
             </div>
