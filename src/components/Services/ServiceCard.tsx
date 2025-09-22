@@ -37,19 +37,25 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           />
         </div>
 
-        {/* Content Block */}
-        <div className=" -top-10 absolute inset-0 rounded-t-[44px] overflow-hidden">
-          {/* <img
-            src={service.contentImage}
-            alt=""
-            className=" w-full h-full object-cover rounded-t-[44px]"
-          /> */}
-
-          {/* Card Type 1: Growth Switcher */}
+        {/* Card Middle  content */}
+        <div className=" -top-10  absolute inset-0 rounded-t-[44px] overflow-hidden">
           {/* Card Type 1: Growth Switcher (only for first card) */}
           {index === 0 && (
-            <div className="mx-auto left-18 max-w-[250px] bg-white p-3 rounded-full absolute top-28 ">
-              {/* Outer wrapper */}
+            <div
+              className=" absolute 
+      top-28
+      left-1/2 
+      -translate-x-1/2
+      max-w-[250px] 
+      bg-white 
+      p-3 
+      rounded-full
+      mx-auto
+      xl:left-18 
+      xl:translate-x-0 "
+            >
+              {/* Outer wrapper  className="mx-auto left-1/2 xl:-translate-1/2 xl:left-18 xl:max-w-[250px] bg-white
+             p-3 rounded-full absolute xl:top-28 top-40 -ans"*/}
               <div
                 className="bg-white rounded-full px-5 py-3"
                 style={{

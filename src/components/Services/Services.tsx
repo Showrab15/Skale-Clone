@@ -24,7 +24,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section className="font-inter w-full  mx-auto max-w-[ 1200px]">
+    <section className="font-inter w-full  mx-auto ">
       <motion.div
         className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
         initial="hidden"
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
 
       {/* Services Grid */}
       <motion.div
-        className="px-4 grid grid-cols-1 xl:grid-cols-3 gap-4  sm:px-[48px] pb-20 lg:px-[64px]"
+        className="px-2  items-center grid grid-cols-1 xl:grid-cols-3 gap-4  sm:px-[48px] pb-20 lg:px-[64px]"
         variants={containerVariants}
       >
         {servicesData.map((service, index) => (
