@@ -37,7 +37,11 @@ const projects: ProjectsData[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section className="xl:hidden  w-full flex lg:flex-row flex-col mx-auto items-center justify-center mt-10 lg:mt-20 gap-16 fle x-wrap">
+    <section
+      id="projects"
+      data-section="projects"
+      className="xl:hidden  w-full flex lg:flex-row flex-col mx-auto items-center justify-center mt-10 lg:mt-20 gap-16 fle x-wrap"
+    >
       {projects.map((card) => (
         <div
           key={card.id}
