@@ -191,10 +191,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="relative bg-red-100 rounded-[48px] mx-[48px] mb-20 overflow-hidden">
+    <footer className="relative bg-[#ffffff] rounded-[48px] xl:mx-[48px] mx-[20px] mb-20 overflow-hidden">
       {/* ... rest of your footer ... */}
       <div className="px-[48px] xl:py-[48px] pt-[48px]">
-        <div className="max-w-6xl mx-auto">
+        <div className="xl:max-w-6xl mx-auto">
           {/* Logo , Description , Button and Social Media Section */}
           <div className="flex flex-col xl:flex-row  items-start justify-between gap-8 mb-12">
             {/* Logo and Description */}
@@ -218,19 +218,80 @@ const Footer = () => {
                 increased their revenue!
               </p>
               {/* CTA Button */}
-              <div className="flex-shrink-0">
-                <motion.button
+              <div
+                className="w-[243px]"
+                style={{ transform: "none", transformOrigin: "50% 50% 0px" }}
+              >
+                <motion.a
+                  target="_blank"
+                  className="block w-full"
+                  style={{
+                    background:
+                      "linear-gradient(rgb(255, 116, 12) 0%, rgb(255, 75, 0) 100%)",
+                    borderRadius: "18px",
+                    boxShadow:
+                      "rgba(244, 77, 4, 0.16) 0px 35px 53px 0px, rgba(244, 77, 4, 0.32) 0px 7px 21px 0px, rgb(191, 54, 0) 0px 2px 0px 0px",
+                    willChange: "auto",
+                    transform: "none",
+                    transformOrigin: "50% 50% 0px",
+                    opacity: 1,
+                  }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="relative bg-gradient-to-b from-orange-400 to-orange-500 px-8 py-4 rounded-2xl shadow-xl shadow-orange-500/20 hover:shadow-orange-500/30 transition-all duration-300"
                 >
-                  <div className="absolute inset-[2px] bg-orange-500 rounded-xl"></div>
-                  <div className="relative bg-gradient-to-b from-orange-400 to-orange-500 px-6 py-3 rounded-xl">
-                    <span className="text-white font-semibold text-xl">
-                      Book a 30-min call
-                    </span>
+                  <div
+                    style={{
+                      backgroundColor: "rgb(255, 92, 0)",
+                      borderRadius: "15px",
+                      boxShadow: `
+                                 rgba(255, 255, 255, 0.16) 0px 0.602187px 0.602187px -1.25px inset,
+                                 rgba(255, 255, 255, 0.14) 0px 2.28853px 2.28853px -2.5px inset,
+                                 rgba(255, 255, 255, 0.06) 0px 10px 10px -3.75px inset,
+                                 rgba(255, 255, 255, 0.42) 0px 0.602187px 0.602187px -1.25px inset,
+                                 rgba(255, 255, 255, 0.37) 0px 2.28853px 2.28853px -2.5px inset,
+                                 rgba(255, 255, 255, 0.15) 0px 10px 10px -3.75px inset,
+                                 rgba(255, 47, 10, 0.96) 0px -0.796192px 1.11467px -1.25px inset,
+                                 rgba(255, 47, 10, 0.88) 0px -2.41451px 3.38031px -2.5px inset,
+                                 rgba(255, 47, 10, 0.68) 0px -6.38265px 8.93571px -3.75px inset,
+                                 rgba(255, 47, 10, 0) 0px -20px 28px -5px inset,
+                                 rgba(0, 0, 0, 0.05) 0px -0.716573px 3.58286px -1.25px inset,
+                                 rgba(0, 0, 0, 0.04) 0px -2.17306px 10.8653px -2.5px inset,
+                                 rgba(0, 0, 0, 0.03) 0px -5.74439px 28.7219px -3.75px inset,
+                                 rgba(0, 0, 0, 0) 0px -18px 90px -5px inset
+                               `,
+                      willChange: "auto",
+                      transform: "none",
+                      transformOrigin: "50% 50% 0px",
+                      opacity: 1,
+                    }}
+                  >
+                    <div
+                      style={{
+                        outline: "none",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "flex-start",
+                        flexShrink: 0,
+                        color: "rgb(255, 255, 255)",
+                        transform: "none",
+                        transformOrigin: "50% 50% 0px",
+                        padding: "12px 4px",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: "24px",
+                          lineHeight: "145%",
+                          color: "rgb(255, 255, 255)",
+                          margin: 0,
+                          textAlign: "center",
+                        }}
+                      >
+                        Book a 15-min call
+                      </p>
+                    </div>
                   </div>
-                </motion.button>
+                </motion.a>
               </div>
             </div>
             {/* Social Media Section */}
