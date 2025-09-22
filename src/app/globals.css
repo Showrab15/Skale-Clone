@@ -60,3 +60,29 @@ body {
     transform: translateX(-50%);
   }
 }
+
+.gradient-anim {
+  background-image: radial-gradient(
+    20% 150% at 50% 50%,
+    rgba(194, 194, 194, 0.24) 0%,
+    rgba(68, 68, 68, 0) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 200% 100%; /* much wider so it has space to travel */
+  background-position: 0% 50%;
+  will-change: background-position;
+  animation: moveBg 4s ease-in-out infinite; /* ease gives a smooth left↔right */
+  border-radius: inherit;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 50%; /* start at left */
+  }
+  50% {
+    background-position: 100% 50%; /* sweep all the way right */
+  }
+  100% {
+    background-position: 0% 50%; /* back to left */
+  }
+}

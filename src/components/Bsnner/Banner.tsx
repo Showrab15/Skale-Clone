@@ -26,12 +26,12 @@ const Banner: React.FC = () => {
 
   return (
     <section
-      className="relative w-full flex flex-col items-center justify-center px-6
+      className="relative w-full flex flex-col items-center justify-center px-4
      md:px-16 py-20 bg-[#f9f9f9]"
     >
       {/* Hero Text */}
       <motion.div
-        className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
+        className=" py-[20px] lg:py-[56px] "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
