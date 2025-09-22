@@ -89,8 +89,8 @@ const Banner: React.FC = () => {
               className="font-medium lg:text-[28px] lg:leading-[40px]
              text-[20px] leading-[28px] text-[#00000080]"
             >
-              Every business needs a website, and {`it's`} <br /> never been
-              easier to get one.{" "}
+              Every business needs a website, and {`it's`}{" "}
+              <br className="lg:block hidden" /> never been easier to get one.{" "}
             </p>
           </div>
         </motion.div>

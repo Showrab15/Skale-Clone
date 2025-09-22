@@ -191,9 +191,9 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="relative bg-[#ffffff] rounded-[48px] xl:mx-[48px] mx-[20px] mb-20 overflow-hidden">
+    <footer className="relative bg-[#ffffff] rounded-[48px] xl:mx-[48px] mx-[20px] mt-10 mb-10 xl:mb-20 overflow-hidden">
       {/* ... rest of your footer ... */}
-      <div className="px-[48px] xl:py-[48px] pt-[48px]">
+      <div className="xl:px-[48px] px-[20px] xl:py-[48px]  pt-[48px]">
         <div className="xl:max-w-6xl mx-auto">
           {/* Logo , Description , Button and Social Media Section */}
           <div className="flex flex-col xl:flex-row  items-start justify-between gap-8 mb-12">
@@ -207,6 +207,7 @@ const Footer = () => {
                   width={50}
                   height={50}
                   alt="logo"
+                  className="lg:w-[50px] lg:h0"
                 />
                 {/* Company Name */}
                 <Image src="/skale.avif" width={127} height={40} alt="logo" />
@@ -386,7 +387,7 @@ const Footer = () => {
       </div>
 
       {/* Scrolling Ticker */}
-      <div className="relative overflow-hidden xl:h-80 h-40 flex items-end">
+      <div className="relative overflow-hidden xl:h-80 h-30 flex items-end">
         <div
           className="absolute inset-0"
           style={{
@@ -405,7 +406,7 @@ const Footer = () => {
           >
             {Array.from({ length: 6 }, (_, i) => (
               <div key={i} className="flex-shrink-0">
-                <h2 className="text-[120px] xl:text-[350px] font-bold text-black/5 whitespace-nowrap">
+                <h2 className="text-[100px] xl:text-[350px] font-bold text-black/5 whitespace-nowrap">
                   skale.solutions
                 </h2>
               </div>

@@ -320,7 +320,7 @@ const FAQSection: React.FC = () => {
         {/* Left side - Header */}
         <motion.div variants={itemVariants}>
           <div className="space-y-8">
-            <h2 className="text-4xl sm:text-[56px] 2xl:text-[80px] leading-[100%] font-extrabold">
+            <h2 className="text-black text-4xl sm:text-[56px] 2xl:text-[80px] leading-[100%] font-extrabold">
               Frequently <span className="text-black/50">asked</span>
               <br />
               questions

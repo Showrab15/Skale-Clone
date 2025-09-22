@@ -488,7 +488,8 @@ const HowItWorks: React.FC = () => {
               className="font-medium lg:text-[28px] lg:leading-[40px]
              text-[20px] leading-[28px] text-[#00000080]"
             >
-              From the first step to the final product <br /> at your hand!
+              From the first step to the final product{" "}
+              <br className="lg:block hidden" /> at your hand!
             </p>
           </div>
         </motion.div>
