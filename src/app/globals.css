@@ -85,3 +85,43 @@ body {
     background-position: 0% 50%; /* back to left */
   }
 }
+/* 3D Card Hover Effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-12 {
+  transform: rotateX(12deg);
+}
+
+.rotate-y-12 {
+  transform: rotateY(12deg);
+}
+
+/* Custom 3D card hover effect */
+.card-3d-hover {
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-out;
+}
+
+.card-3d-hover:hover {
+  transform: scale(1.05) translateY(-2rem) rotateX(12deg) rotateY(12deg);
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternative approach using group hover */
+.group:hover .card-3d-transform {
+  transform: scale(1.05) translateY(-2rem) rotateX(12deg) rotateY(12deg);
+}
+
+.group:hover .card-image-scale {
+  transform: scale(1.1);
+}
+
+.group:hover .card-overlay-show {
+  opacity: 1;
+}
+
+.group:hover .card-title-slide {
+  transform: translateY(0);
+}

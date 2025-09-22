@@ -14,6 +14,7 @@ export default function Home() {
       <Banner />
       <Sponsors />
       <Projects />
+
       <AnimatedProjects />
       <Services />
 
