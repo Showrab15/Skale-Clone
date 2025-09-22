@@ -26,14 +26,14 @@ const Services: React.FC = () => {
   return (
     <section className="font-inter w-full  mx-auto ">
       <motion.div
-        className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
+        className="px-[24px] sm:px-[48px] py-[20px] lg:py-[6px] lg:px-[64px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
       >
         <motion.div variants={itemVariants}>
-          <div className="space-y-8 text-center">
+          <div className=" text-center">
             <div className="inline-flex mb-8">
               <div
                 className="bg-white rounded-full px-5 py-3 shadow-lg"
@@ -46,13 +46,13 @@ const Services: React.FC = () => {
                 </p>
               </div>
             </div>
-            <h1 className="font-semibold xl:font-extrabold text-[#5e5e5e] text-4xl leading-[42px] md:text-[80px] md:leading-[96px] xl:text-[110px] xl:leading-[130px] bg-clip-text bg-[radial-gradient(43%_228.297%_at_50%_60.6452%,_#000000_0%,_#5e5e5e_100%)]">
+            <h1 className="mb-8 font-semibold xl:font-extrabold text-[#5e5e5e] text-4xl leading-[42px] md:text-[80px] md:leading-[96px] xl:text-[110px] xl:leading-[130px] bg-clip-text bg-[radial-gradient(43%_228.297%_at_50%_60.6452%,_#000000_0%,_#5e5e5e_100%)]">
               Designs That <br />
               Drive Results
             </h1>
 
             <p
-              className="font-medium lg:text-[28px] lg:leading-[40px]
+              className="mb-8 font-medium lg:text-[28px] lg:leading-[40px]
              text-[20px] leading-[28px] text-[#00000080]"
             >
               What we can help you to achieve?

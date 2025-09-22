@@ -37,11 +37,12 @@ const projects: ProjectsData[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section className="  w-full flex xl:flex-row flex-col mx-auto items-center justify-center mt-10 lg:mt-20 gap-16 fle x-wrap">
+    <section className="xl:hidden  w-full flex lg:flex-row flex-col mx-auto items-center justify-center mt-10 lg:mt-20 gap-16 fle x-wrap">
       {projects.map((card) => (
         <div
           key={card.id}
-          className=" bg-white flex items-center justify-center p-2 w-[340px] h-[340px]  relative  rounded-[44px] shadow-lg overflow-hidden group"
+          className=" bg-white flex items-center justify-center p-2 w-[340px] h-[340px]  relative 
+           rounded-[44px] shadow-lg overflow-hidden group"
         >
           {/* Main background image */}
           <div className="p-2 w-[320px] flex justify-center items-center mx-auto my-auto h-[320px]  absolute inset-0 rounded-[44px]">

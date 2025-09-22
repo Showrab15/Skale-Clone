@@ -458,7 +458,7 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#f0f0f0] rounded-t-[36px] xl:rounded-t-[100px] font-inter antialiased text-gray-800">
+    <div className="mt-10 bg-[#f0f0f0] rounded-t-[36px] xl:rounded-t-[100px] font-inter antialiased text-gray-800">
       <motion.div
         className="px-[24px] sm:px-[48px] py-[20px] lg:py-[56px] lg:px-[64px]"
         initial="hidden"
