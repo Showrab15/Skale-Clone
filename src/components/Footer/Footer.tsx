@@ -218,15 +218,82 @@ const Footer = () => {
                 Scale your business with ease. Over 60+ startups trusted us and
                 increased their revenue!
               </p>
-
               {/* CTA Button */}
 
-              {/* CTA Button */}
-              <div className="cursor-pointer relative inline-flex items-center justify-center group px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-[22px] shadow-[0_35px_53px_rgba(244,77,4,0.16),0_7px_21px_rgba(244,77,4,0.32),0_2px_0_rgba(191,54,0,1)] hover:scale-105 transition-transform duration-300">
-                <span className="text-white text-lg md:text-xl font-medium z-10">
-                  Book a 15-min call
-                </span>
-
+              <div
+                className="w-[243px] cursor-pointer relative inline-flex items-center
+               justify-center group px-2 py-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-[22px] shadow-[0_35px_53px_rgba(244,77,4,0.16),0_7px_21px_rgba(244,77,4,0.32),0_2px_0_rgba(191,54,0,1)] hover:scale-105 transition-transform duration-300"
+              >
+                <motion.a
+                  target="_blank"
+                  className="block w-[243px]"
+                  style={{
+                    background:
+                      "linear-gradient(rgb(255, 116, 12) 0%, rgb(255, 75, 0) 100%)",
+                    borderRadius: "18px",
+                    boxShadow:
+                      "rgba(244, 77, 4, 0.16) 0px 35px 53px 0px, rgba(244, 77, 4, 0.32) 0px 7px 21px 0px, rgb(191, 54, 0) 0px 2px 0px 0px",
+                    willChange: "auto",
+                    transform: "none",
+                    transformOrigin: "50% 50% 0px",
+                    opacity: 1,
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: "rgb(255, 92, 0)",
+                      borderRadius: "15px",
+                      boxShadow: `
+                                 rgba(255, 255, 255, 0.16) 0px 0.602187px 0.602187px -1.25px inset,
+                                 rgba(255, 255, 255, 0.14) 0px 2.28853px 2.28853px -2.5px inset,
+                                 rgba(255, 255, 255, 0.06) 0px 10px 10px -3.75px inset,
+                                 rgba(255, 255, 255, 0.42) 0px 0.602187px 0.602187px -1.25px inset,
+                                 rgba(255, 255, 255, 0.37) 0px 2.28853px 2.28853px -2.5px inset,
+                                 rgba(255, 255, 255, 0.15) 0px 10px 10px -3.75px inset,
+                                 rgba(255, 47, 10, 0.96) 0px -0.796192px 1.11467px -1.25px inset,
+                                 rgba(255, 47, 10, 0.88) 0px -2.41451px 3.38031px -2.5px inset,
+                                 rgba(255, 47, 10, 0.68) 0px -6.38265px 8.93571px -3.75px inset,
+                                 rgba(255, 47, 10, 0) 0px -20px 28px -5px inset,
+                                 rgba(0, 0, 0, 0.05) 0px -0.716573px 3.58286px -1.25px inset,
+                                 rgba(0, 0, 0, 0.04) 0px -2.17306px 10.8653px -2.5px inset,
+                                 rgba(0, 0, 0, 0.03) 0px -5.74439px 28.7219px -3.75px inset,
+                                 rgba(0, 0, 0, 0) 0px -18px 90px -5px inset
+                               `,
+                      willChange: "auto",
+                      transform: "none",
+                      transformOrigin: "50% 50% 0px",
+                      opacity: 1,
+                      padding: "6px 2px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        outline: "none",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "flex-start",
+                        flexShrink: 0,
+                        color: "rgb(255, 255, 255)",
+                        transform: "none",
+                        transformOrigin: "50% 50% 0px",
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: "24px",
+                          lineHeight: "145%",
+                          color: "rgb(255, 255, 255)",
+                          margin: 0,
+                          textAlign: "center",
+                        }}
+                      >
+                        Book a 15-min call
+                      </p>
+                    </div>
+                  </div>
+                </motion.a>
                 {/* Decorative Inner Shadow Layer */}
                 <div className="absolute inset-0 rounded-[18px] shadow-[inset_0_0.6px_0.6px_-1.25px_rgba(255,255,255,0.16),inset_0_2.29px_2.29px_-2.5px_rgba(255,255,255,0.14),inset_0_10px_10px_-3.75px_rgba(255,255,255,0.06),inset_0_0.6px_0.6px_-1.25px_rgba(255,255,255,0.58),inset_0_2.29px_2.29px_-2.5px_rgba(255,255,255,0.51),inset_0_10px_10px_-3.75px_rgba(255,255,255,0.2),inset_0_-0.8px_1.11px_-1.25px_rgba(255,47,10,0.96),inset_0_-2.41px_3.38px_-2.5px_rgba(255,47,10,0.88),inset_0_-6.38px_8.93px_-3.75px_rgba(255,47,10,0.68),inset_0_-20px_28px_-5px_rgba(255,47,10,0),inset_0_-0.71px_3.58px_-1.25px_rgba(255,255,255,0.24),inset_0_-2.17px_10.86px_-2.5px_rgba(255,255,255,0.22),inset_0_-5.74px_28.72px_-3.75px_rgba(255,255,255,0.17),inset_0_-18px_90px_-5px_rgba(255,255,255,0)] pointer-events-none"></div>
 
