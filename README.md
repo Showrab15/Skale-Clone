@@ -4,7 +4,7 @@
 
 ## Overview
 
-**Skale Clone** is a pixel-perfect replica of the official Skale website, rebuilt with **Next.js**, **Tailwind CSS**, and modern animation libraries. The project delivers a highly responsive design, smooth animations, and interactive user experiences across all devices.
+**Skale Clone** is a pixel-perfect replica of the official Skale website, rebuilt with **Next.js**, **TypeScript**, **Tailwind CSS**, and modern animation libraries like **Framer Motion**, **GSAP**. The project delivers a highly responsive design, smooth animations, and interactive user experiences across all devices.
 
 Every section – from Navbar, Hero, Sponsors & Advertisement, Projects, Process & How It Work, Services & Product, Pricing with to Call-to-Action , Client Feedback & Testimonial and Footer – has been carefully crafted to match the original site while maintaining clean, scalable code.
 
